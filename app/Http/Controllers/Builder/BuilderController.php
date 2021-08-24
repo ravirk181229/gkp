@@ -40,6 +40,8 @@ class BuilderController extends Controller
         'title' => ['required', 'max:100'],
         'min_price' => ['required', 'max:100'],
         'max_price' => ['required', 'max:100'],
+        'size' => ['required'],
+        'unit' => ['required'],
         'details' => ['required'],
         'list_details' => ['required'],
         'price_unit' => ['required', 'max:100'],
@@ -52,6 +54,7 @@ class BuilderController extends Controller
         'land_mark' => ['required'],
         'pin_code' => ['required'],
       ]);
+    // dd($request);
     $property = Property::create($request->all());
     $flore_images = $request->file('img');
     foreach ($flore_images as $key => $flore_image) {

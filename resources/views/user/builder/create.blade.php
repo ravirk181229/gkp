@@ -172,6 +172,24 @@
 					            @enderror
 			              </div>
 			              <div class="form-group">
+			                <label for="size">Size</label>
+			                <input type="text" name="size" class="form-control @error('size') is-invalid @enderror" value="{{ old('size', '') }}">
+			                 @error('size')
+					              <span class="invalid-feedback" role="alert">
+					                <strong>{{ $message }}</strong>
+					              </span>
+					            @enderror
+			              </div>
+			              <div class="form-group">
+			                <label for="unit">Unit</label>
+			                <input type="text" name="unit" class="form-control @error('unit') is-invalid @enderror" value="{{ old('unit', '') }}">
+			                 @error('unit')
+					              <span class="invalid-feedback" role="alert">
+					                <strong>{{ $message }}</strong>
+					              </span>
+					            @enderror
+			              </div>
+			              <div class="form-group">
 			                <label for="details">Details</label>
 			                <textarea name="details" id="details" class="form-control @error('details') is-invalid @enderror" cols="30" rows="10">{{ old('details', '') }}</textarea>
 			                 @error('details')
